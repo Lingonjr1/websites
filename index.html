@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message to Discord</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Send Message to Discord</h1>
+    
+    <div id="tutorial">
+        <h2>How to Create a Discord Webhook URL</h2>
+        <ol>
+            <li>Open Discord and go to your server.</li>
+            <li>Click on the server name at the top of the channel list, then select "Server Settings."</li>
+            <li>Go to the "Integrations" tab.</li>
+            <li>Click on "Webhooks."</li>
+            <li>Click on "New Webhook."</li>
+            <li>Give your webhook a name and select the channel where you want messages to be sent.</li>
+            <li>Click "Copy Webhook URL" to copy the URL to your clipboard.</li>
+            <li>Paste this URL into the field below.</li>
+        </ol>
+    </div>
+
+    <form id="discordForm">
+        <label for="webhookUrl">Discord Webhook URL:</label>
+        <input type="text" id="webhookUrl" name="webhookUrl" required placeholder="Enter your webhook URL here">
+        <br>
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" required placeholder="Enter your message here">
+        <br>
+        <label for="messageCount">Number of Messages:</label>
+        <input type="number" id="messageCount" name="messageCount" required min="1" value="1">
+        <br>
+        <button type="submit">Send</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
